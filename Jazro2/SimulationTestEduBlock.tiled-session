@@ -1,0 +1,63 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "SimulationTest/TestLand.tmx",
+    "expandedProjectPaths": [
+        ".",
+        "SimulationTest"
+    ],
+    "exportAsImage.useCurrentScale": true,
+    "fileStates": {
+        "SimulationTest/Collision.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "SimulationTest/TestLand.tmx": {
+            "scale": 1.6,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 118.75,
+                "y": 180.3125
+            }
+        },
+        "SimulationTest/TestMap.tmx": {
+            "scale": 2,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 174.5,
+                "y": 222.75
+            }
+        },
+        "SimulationTest/testStyle.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "C:/Users/USER/Desktop/Internship JAZRO/EduBlock/Jazro Web/SimulationTest/Tiled",
+    "map.height": 30,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 12,
+    "map.tileWidth": 12,
+    "map.width": 20,
+    "openFiles": [
+        "SimulationTest/testStyle.tsx",
+        "SimulationTest/TestLand.tmx",
+        "SimulationTest/Collision.tsx",
+        "SimulationTest/TestLand.tmx",
+        "SimulationTest/TestLand.tmx"
+    ],
+    "project": "SimulationTestEduBlock.tiled-project",
+    "recentFiles": [
+        "SimulationTest/TestLand.tmx",
+        "SimulationTest/testStyle.tsx",
+        "SimulationTest/Collision.tsx",
+        "SimulationTest/TestMap.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 12,
+        "width": 12
+    }
+}

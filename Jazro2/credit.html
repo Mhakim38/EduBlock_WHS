@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/customToolbox_style.css">
+    <script src="https://kit.fontawesome.com/b9ae426220.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- bootstrap -->
+
+    <link rel="icon" href="Pic Jazro/logo.png">
+    <!--Change tab LOGO-->
+
+    <title>Credit</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            background-color: rgb(255, 255, 255);
+            /* outline: 1px dotted #ff0000; */
+            scroll-behavior: smooth;
+
+            background-attachment: fixed;
+
+            background-image: radial-gradient(circle, #1954ac, #4c5dae, #6966af, #7f71b1, #927db3);
+            height: 100%;
+            /* background-image: url('/profile/bghakim.jpg'); */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: static;
+            caret-color: transparent;
+        }
+
+        .header {
+            background-size: 20%;
+            background-color: #201a26;
+            background-repeat: no-repeat;
+            /* background-size: cover; */
+            background-position: 100% 40%;
+            background-image: url('profile/top.jpg');
+
+            /* background-image: radial-gradient(circle, #051937, #171228, #190a1a, #12040d, #000000); */
+
+            width: 100%;
+            height: 100px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            transform: translateX(20px);
+        }
+
+        .dropbtn {
+            background-color: #29a9e1;
+            color: white;
+            padding: 16px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+
+        }
+
+        .dropbtn:focus {
+            background-color: #2980B9;
+            color: #000;
+        }
+
+        .dropbtn:hover {
+            background-color: #2980B9;
+            color: #000;
+        }
+
+        .dropdown {
+            position: relative;
+            float: right;
+            top: 28px;
+            right: 40px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            right: 0px;
+            text-align: right;
+            border-radius: 5px;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .frameHakim {
+            width: 50%;
+            height: auto;
+
+            background: transparent;
+            object-fit: cover;
+            box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 11px 15px 30px 16px rgba(0, 0, 0, 0.67) inset;
+            box-shadow: 20px 19px 34px 5px rgba(0, 0, 0, 0.57);
+            -webkit-box-shadow: 20px 19px 34px 5px rgba(0, 0, 0, 0.57);
+            -moz-box-shadow: 20px 19px 34px 5px rgba(0, 0, 0, 0.57);
+
+            border-radius: 10px;
+            padding: 10px;
+
+            position: absolute;
+            top: 20%;
+            left: 3%;
+
+            display: flex;
+        }
+
+        .frameSiddiq {
+            width: 50%;
+            height: auto;
+
+            background: transparent;
+            object-fit: cover;
+            box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 11px 15px 30px 16px rgba(0, 0, 0, 0.67) inset;
+            box-shadow: 20px 19px 34px 5px rgba(0, 0, 0, 0.57);
+            -webkit-box-shadow: 20px 19px 34px 5px rgba(0, 0, 0, 0.57);
+            -moz-box-shadow: 20px 19px 34px 5px rgba(0, 0, 0, 0.57);
+
+            border-radius: 10px;
+            padding: 10px;
+
+            position: absolute;
+            top: 80%;
+            left: 48%;
+
+            display: flex;
+        }
+
+        .frameWafiq {
+            width: 50%;
+            height: auto;
+
+            background: transparent;
+            object-fit: cover;
+            box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 11px 15px 30px 16px rgba(0, 0, 0, 0.67) inset;
+            box-shadow: 20px 19px 34px 5px rgba(0, 0, 0, 0.57);
+            -webkit-box-shadow: 20px 19px 34px 5px rgba(0, 0, 0, 0.57);
+            -moz-box-shadow: 20px 19px 34px 5px rgba(0, 0, 0, 0.57);
+
+            border-radius: 10px;
+            padding: 10px;
+
+            position: absolute;
+            top: 140%;
+            left: 3%;
+
+            display: flex;
+        }
+
+        .bg {
+            /* color: white; */
+            background-color: rgba(0, 0, 0, 0.459);
+            width: 100%;
+            height: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .quotes {
+            width: 100%;
+            height: 100px;
+
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .boxQ {
+            text-align: center;
+            vertical-align: bottom;
+            /* border: 5px solid; */
+            line-height: 100px;
+            color: rgb(255, 255, 255);
+
+            background-color: rgb(0, 0, 0);
+            background-image: url('xxxx');
+            background-size: 20%;
+            background-blend-mode: lighten;
+
+        }
+
+        .bodycard {
+            height: 100px;
+            width: 100px;
+            background-color: #000000;
+            display: flex;
+            left: 500px;
+
+        }
+
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+        }
+
+        .user-card {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            height: auto;
+            background-color: #00000091;
+            border-radius: 40px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            backdrop-filter: blur(10px);
+
+
+            transition: width 0.5s;
+            transition-timing-function: ease;
+        }
+
+        .user-card img:hover {
+            width: 51%;
+        }
+
+        .right-card {
+            margin-left: auto;
+        }
+
+        .user-card img {
+            width: 50%;
+            height: auto;
+            border-radius: 50px;
+            margin: 20px;
+
+            transition: width 0.5s;
+            transition-timing-function: ease;
+        }
+
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 20px;
+            color: #ddd;
+        }
+
+        .user-info h3.name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .user-info p.hobby {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .user-info p.email {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .bigname {
+            font-size: 40px;
+        }
+
+        .tajuk {
+            font-size: 80px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            letter-spacing: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .user-card {
+                width: 100%;
+                margin: 20px 0;
+            }
+
+            .right-card {
+                float: none;
+                margin-left: 0;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            /* remove underline  */
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--Header Class-->
+    <div class="header">
+
+        <div class="logo">
+            <a href="https://www.jazro.com.my/">
+                <img src="Pic Jazro/logo.png" alt="logo" style="height: 85px; transform: translate(30px, 5px);"></a>
+            <a href="https://www.jazro.com.my/">
+                <img src="Pic Jazro/text.png" alt="logo" style="height: 30px; transform: translate(30px, 5px);">
+            </a>
+
+            <script>
+                /* When the user clicks on the button, 
+                toggle between hiding and showing the dropdown content */
+
+                function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
+
+                // Close the dropdown if the user clicks outside of it
+
+                window.onclick = function (event) {
+                    if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                }
+            </script>
+
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">=</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="/Jazro2/LandingPage.html">Home</a>
+                    <a href="index2.html">EduBlock</a>
+                    <a href="https://portal.jazro.com.my/">Learning Portal</a>
+                    <a href="https://www.jazro.com.my/about-us">About Us</a>
+                </div>
+
+            </div>
+            <!-- End of Dropdown Button -->
+        </div>
+        <!-- End of logo class -->
+
+    </div>
+    <!-- End of the Header Class-->
+    <h1 class="tajuk"><b>CREDIT</b></h1>
+    <div class="card-container">
+
+        <div class="user-card">
+            <img src="profile/hakim.jpg" alt="Avatar">
+            <div class="user-info">
+                <h3 class="bigname"><b> MUHAMMAD HAKIM BIN HUSIN</b></h3>
+                <br>
+                <p class="hobby">-- Loves to make custom keyboards --</p>
+                <br>
+                <p class="email">"Ignore others move foward"</p>
+                <br>
+                <p class="email">hakimhusin7466@gmail.com</p>
+                <!-- <p class="email">+60 1117857466</p> -->
+                <br>
+                <div class="buttons">
+                    <a href="https://open.spotify.com/playlist/6bO8ue2AMJbFIdAUYe3VpP?si=8465be1fcc0a454d">
+                        <i class="bi bi-spotify"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/its.hakim38/">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+
+                    <a href="https://github.com/hakimi38">
+                        <i class="fa fa-github"></i>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@mcflurry380">
+                        <i class="bi bi-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="user-card right-card">
+            <img src="profile/siddiq.jpg" alt="Avatar">
+            <div class="user-info">
+                <h3 class="bigname"><b> MUHAMMAD SIDDIQ BIN SAIDIN</b></h3>
+                <br>
+                <p class="hobby">-- Just read bro --</p>
+                <br>
+                <p class="email">"Eat, sleep and you'll be fine"</p>
+                <br>
+                <p class="email">sidsai091@gmail.com</p>
+                <!-- <p class="email">+60 1117857466</p> -->
+                <br>
+                <div class="buttons">
+                    <a href="https://www.instagram.com/02_sid/">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://github.com/sid177013">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="user-card">
+            <img src="profile/wafiq.jpg" alt="Avatar">
+            <div class="user-info">
+                <h3 class="bigname"><b> TUAN AHMAD WAFIQ BIN TUAN MAHMUD</b></h3>
+                <br>
+                <p class="hobby">-- Play games and healing di pantai --</p>
+                <br>
+                <p class="email">"I want to thank google, chatGPT, and to whoever invented copy & paste. Thank you"</p>
+                <br>
+                <p class="email">tuanwaf02@gmail.com</p>
+                <!-- <p class="email">+60 1117857466</p> -->
+                <br>
+                <div class="buttons">
+                    <a href="https://www.instagram.com/tuanwafiq_/">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+
+                    </a>
+                    <a href="https://github.com/Tuanwaf">
+                        <i class="fa fa-github"></i>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@tuanwafiq_">
+                        <i class="bi bi-tiktok"></i>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

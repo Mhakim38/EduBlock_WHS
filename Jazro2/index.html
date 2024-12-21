@@ -1,0 +1,733 @@
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+  <title>
+    EduBlock Website
+  </title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/customToolbox_style.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!-- bootstrap -->
+
+  <link rel="icon" href="Pic Jazro/logo.png">
+
+
+  <!--Src Blockly-->
+  <script src="js/blockly_compressed.js"></script>
+  <script src="js/blocks_compressed.js"></script>
+  <script src="js/javascript_compressed.js"></script>
+  <script src="js/en.js"></script>
+  <script src="js/blocklyTheme.js"></script>
+  <script src="js/blockDefinition.js"></script>
+  <script src="js/toolbox_label.js"></script>
+  <script src="js/custom_category.js"></script>
+
+  <!--CSS CODE-->
+  <style>
+    html {
+      scroll-behavior: smooth;
+      caret-color: transparent;
+    }
+
+    .header {
+      background-image: url('Pic Jazro/doodle.jpeg');
+      background-size: 20%;
+      background-color: rgba(218, 218, 218, 0.7);
+      background-blend-mode: lighten;
+      width: 100%;
+      height: 13%;
+      position: absolute;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .dummy {
+
+      width: 100%;
+      height: 13%;
+
+    }
+
+    .dummy2 {
+
+      width: 100%;
+      height: 13%;
+
+    }
+
+    #textCoding {
+      /* top: ;
+      left: ; */
+      /* display: none; */
+      /* display: flex;
+      flex-shrink: 4; */
+      display: flex;
+      width: 30%;
+      height: 50%;
+      color: white;
+      background-color: rgb(0, 0, 0);
+      padding: 20px;
+    }
+
+    .logo {
+      transform: translateX(20px);
+    }
+
+    /*Hamburger Menu Right*/
+
+    .dropbtn {
+      background-color: #29a9e1;
+      color: white;
+      padding: 16px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+
+    }
+
+    .dropbtn:focus {
+      background-color: #2980B9;
+      color: #000;
+    }
+
+    .dropbtn:hover {
+      background-color: #2980B9;
+      color: #000;
+    }
+
+    .dropdown {
+      position: relative;
+      float: right;
+      top: 28px;
+      right: 40px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      right: 0px;
+      text-align: right;
+      border-radius: 5px;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown a:hover {
+      background-color: #ddd;
+    }
+
+    .show {
+      display: block;
+    }
+
+
+    /*Nav bar on the right*/
+    ul {
+      list-style-type: none;
+      margin-top: 200px;
+      padding: 10px 10px;
+      width: 100px;
+      background-color: #f1f1f1;
+      float: right;
+      border-radius: 10px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      background-image: url('Pic Jazro/test1.jpeg');
+      background-size: 190px;
+      background-color: rgba(204, 204, 204, 0.361);
+      background-blend-mode: lighten;
+
+    }
+
+    li a {
+      display: block;
+      color: #000;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+
+    /* Change the link color on hover */
+    li a:hover {
+      background-color: #98afd8;
+      color: rgb(0, 0, 0);
+    }
+
+    /*End of nav bar on the right*/
+
+    /* Blockly Div */
+    #blocklyDiv {
+      float: left;
+      height: 87%;
+      width: 70%;
+      position: absolute;
+      top: 13%;
+    }
+
+    /* End of Blockly Div */
+
+    /* Convert text coding Div */
+    #simulation {
+      left: 71%;
+      height: 95%;
+      width: 30%;
+      position: absolute;
+      transform: translate(90% 50%);
+      top: 13%;
+      color: white;
+      background-color: rgb(0, 0, 0);
+      padding: 20px;
+    }
+
+    /* End of Convert text coding  Div */
+
+    .runCode {
+      background-color: #29a9e1;
+      color: white;
+      padding: 16px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+
+    }
+
+    .runCode:focus {
+      background-color: #2980B9;
+      color: #000;
+    }
+
+    .runCode:hover {
+      background-color: #2980B9;
+      color: #000;
+    }
+
+    .runCodePos {
+      position: relative;
+      float: right;
+      top: 14px;
+      right: 50px;
+    }
+
+    .converter {
+      background-color: #29a9e1;
+      color: white;
+      padding: 16px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+
+    }
+
+    .converter:focus {
+      background-color: #2980B9;
+      color: #000;
+    }
+
+    .converter:hover {
+      background-color: #2980B9;
+      color: #000;
+    }
+
+    .converterPos {
+      position: relative;
+      float: right;
+      top: 14px;
+      right: 50px;
+    }
+  </style>
+  <!--END OF CSS CODE-->
+
+  <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <!--Blockly Section-->
+
+  <div id="blocklyDiv"></div>
+
+  <!-- Text Coding section -->
+  <div id="simulation">
+    This is Text Coding Section
+  </div>
+
+  <!-- End Text Coding sec -->
+
+  <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+    <toolboxlabel name="EduBlock Toolbox" colour="white"></toolboxlabel>
+    <sep gap="32"></sep>
+    <category css-icon="customIcon fa fa-play" name="Start" colour="#ccac64">
+      <block type="start"></block>
+    </category>
+
+    <category css-icon="customIcon fa fa-bicycle" name="Move" colour="#8a00c2">
+      <block type="move_1">
+        <field name="FB">forward</field>
+        <field name="move_1">move_upward</field>
+      </block>
+      <block type="turn">
+        <field name="RL">right</field>
+        <field name="turnR">up</field>
+      </block>
+    </category>
+
+    <category css-icon="customIcon fa fa-info-circle" name="Control" categorystyle="control_category">
+      <block type="controls_repeat_ext">
+        <value name="TIMES">
+          <shadow type="math_number">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="controls_whileUntil">
+        <field name="MODE">WHILE</field>
+      </block>
+      <block type="controls_if" />
+    </category>
+
+    <toolboxlabel name="JScript Converter" colour="white"></toolboxlabel>
+    <sep gap="32"></sep>
+
+    <category css-icon="customIcon fa fa-times" name="Math" colour="#5b67a5">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+      <block type="math_arithmetic">
+        <field name="OP">ADD</field>
+        <value name="A">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="B">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_single">
+        <field name="OP">ROOT</field>
+        <value name="NUM">
+          <shadow type="math_number">
+            <field name="NUM">9</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_trig">
+        <field name="OP">SIN</field>
+        <value name="NUM">
+          <shadow type="math_number">
+            <field name="NUM">45</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_constant">
+        <field name="CONSTANT">PI</field>
+      </block>
+      <block type="math_number_property">
+        <mutation divisor_input="false" />
+        <field name="PROPERTY">EVEN</field>
+        <value name="NUMBER_TO_CHECK">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_round">
+        <field name="OP">ROUND</field>
+        <value name="NUM">
+          <shadow type="math_number">
+            <field name="NUM">3.1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_on_list">
+        <mutation op="SUM" />
+        <field name="OP">SUM</field>
+      </block>
+      <block type="math_modulo">
+        <value name="DIVIDEND">
+          <shadow type="math_number">
+            <field name="NUM">64</field>
+          </shadow>
+        </value>
+        <value name="DIVISOR">
+          <shadow type="math_number">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_constrain">
+        <value name="VALUE">
+          <shadow type="math_number">
+            <field name="NUM">50</field>
+          </shadow>
+        </value>
+        <value name="LOW">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="HIGH">
+          <shadow type="math_number">
+            <field name="NUM">100</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_random_int">
+        <value name="FROM">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="TO">
+          <shadow type="math_number">
+            <field name="NUM">100</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="math_random_float" />
+    </category>
+
+    <category name="Text" colour="#5ba58c">
+      <block type="text">
+        <field name="TEXT" />
+      </block>
+      <block type="text_join">
+        <mutation items="2" />
+      </block>
+      <block type="text_append">
+        <field name="VAR" id="S0Y5$vt*|vmoI?=Fth|A">item</field>
+        <value name="TEXT">
+          <shadow type="text">
+            <field name="TEXT" />
+          </shadow>
+        </value>
+      </block>
+      <block type="text_length">
+        <value name="VALUE">
+          <shadow type="text">
+            <field name="TEXT">abc</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="text_isEmpty">
+        <value name="VALUE">
+          <shadow type="text">
+            <field name="TEXT" />
+          </shadow>
+        </value>
+      </block>
+      <block type="text_indexOf">
+        <field name="END">FIRST</field>
+        <value name="VALUE">
+          <block type="variables_get">
+            <field name="VAR" id="V%|(Qo*icNS8n}?Hsht]">text</field>
+          </block>
+        </value>
+        <value name="FIND">
+          <shadow type="text">
+            <field name="TEXT">abc</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="text_charAt">
+        <mutation at="true" />
+        <field name="WHERE">FROM_START</field>
+        <value name="VALUE">
+          <block type="variables_get">
+            <field name="VAR" id="V%|(Qo*icNS8n}?Hsht]">text</field>
+          </block>
+        </value>
+      </block>
+      <block type="text_getSubstring">
+        <mutation at1="true" at2="true" />
+        <field name="WHERE1">FROM_START</field>
+        <field name="WHERE2">FROM_START</field>
+        <value name="STRING">
+          <block type="variables_get">
+            <field name="VAR" id="V%|(Qo*icNS8n}?Hsht]">text</field>
+          </block>
+        </value>
+      </block>
+      <block type="text_changeCase">
+        <field name="CASE">UPPERCASE</field>
+        <value name="TEXT">
+          <shadow type="text">
+            <field name="TEXT">abc</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="text_trim">
+        <field name="MODE">BOTH</field>
+        <value name="TEXT">
+          <shadow type="text">
+            <field name="TEXT">abc</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="text_print">
+        <value name="TEXT">
+          <shadow type="text">
+            <field name="TEXT">abc</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="text_prompt_ext">
+        <mutation type="TEXT" />
+        <field name="TYPE">TEXT</field>
+        <value name="TEXT">
+          <shadow type="text">
+            <field name="TEXT">abc</field>
+          </shadow>
+        </value>
+      </block>
+    </category>
+
+    <category name="Lists" colour="#745ba5">
+      <block type="lists_create_with">
+        <mutation items="0" />
+      </block>
+      <block type="lists_create_with">
+        <mutation items="3" />
+      </block>
+      <block type="lists_repeat">
+        <value name="NUM">
+          <shadow type="math_number">
+            <field name="NUM">5</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="lists_length" />
+      <block type="lists_isEmpty" />
+      <block type="lists_indexOf">
+        <field name="END">FIRST</field>
+        <value name="VALUE">
+          <block type="variables_get">
+            <field name="VAR" id="[ut*=%w:=dz5j8Ql^3tr">list</field>
+          </block>
+        </value>
+      </block>
+      <block type="lists_getIndex">
+        <mutation statement="false" at="true" />
+        <field name="MODE">GET</field>
+        <field name="WHERE">FROM_START</field>
+        <value name="VALUE">
+          <block type="variables_get">
+            <field name="VAR" id="[ut*=%w:=dz5j8Ql^3tr">list</field>
+          </block>
+        </value>
+      </block>
+      <block type="lists_setIndex">
+        <mutation at="true" />
+        <field name="MODE">SET</field>
+        <field name="WHERE">FROM_START</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR" id="[ut*=%w:=dz5j8Ql^3tr">list</field>
+          </block>
+        </value>
+      </block>
+      <block type="lists_getSublist">
+        <mutation at1="true" at2="true" />
+        <field name="WHERE1">FROM_START</field>
+        <field name="WHERE2">FROM_START</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR" id="[ut*=%w:=dz5j8Ql^3tr">list</field>
+          </block>
+        </value>
+      </block>
+      <block type="lists_split">
+        <mutation mode="SPLIT" />
+        <field name="MODE">SPLIT</field>
+        <value name="DELIM">
+          <shadow type="text">
+            <field name="TEXT">,</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="lists_sort">
+        <field name="TYPE">NUMERIC</field>
+        <field name="DIRECTION">1</field>
+      </block>
+    </category>
+
+    <category name="Colour" colour="#a5745b">
+      <block type="colour_picker">
+        <field name="COLOUR">#ff0000</field>
+      </block>
+      <block type="colour_random" />
+      <block type="colour_rgb">
+        <value name="RED">
+          <shadow type="math_number">
+            <field name="NUM">100</field>
+          </shadow>
+        </value>
+        <value name="GREEN">
+          <shadow type="math_number">
+            <field name="NUM">50</field>
+          </shadow>
+        </value>
+        <value name="BLUE">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="colour_blend">
+        <value name="COLOUR1">
+          <shadow type="colour_picker">
+            <field name="COLOUR">#ff0000</field>
+          </shadow>
+        </value>
+        <value name="COLOUR2">
+          <shadow type="colour_picker">
+            <field name="COLOUR">#3333ff</field>
+          </shadow>
+        </value>
+        <value name="RATIO">
+          <shadow type="math_number">
+            <field name="NUM">0.5</field>
+          </shadow>
+        </value>
+      </block>
+    </category>
+
+    <script>
+      var blocklyArea = document.getElementById('blocklyArea');
+      var workspace = Blockly.inject('blocklyDiv',
+        {
+          media: 'media/', toolbox: document.getElementById('toolbox'), grid: {
+            spacing: 30,
+            length: 1,
+            colour: '#1c1c1c',
+            snap: true
+          },
+          zoom: {
+            controls: true,
+            wheel: true,
+            startScale: 1,
+            maxScale: 3,
+            minScale: 0.3,
+            scaleSpeed: 1.2
+          }, theme: Blockly.Themes.Jazro,
+        });
+
+      workspace.addChangeListener(Blockly.Events.disableOrphans);
+
+      function runCode() {
+        window.LoopTrap = 1000;
+        Blockly.JavaScript.INFINITE_LOOP_TRAP =
+          'if (--window.LoopTrap == 0) throw "Infinite loop.";\n';
+        var code = Blockly.JavaScript.workspaceToCode(workspace);
+        Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
+        try {
+          eval(code);
+        } catch (e) {
+          alert(e);
+        }
+      }
+
+      workspace.addChangeListener(converter);
+
+      function converter() {
+        var codes = Blockly.JavaScript.workspaceToCode(workspace);
+        document.getElementById('simulation').innerHTML = codes;
+      }
+    </script>
+
+
+  </xml>
+
+
+  <!--Header Class-->
+  <div class="header">
+
+    <div class="logo">
+      <a href="https://www.jazro.com.my/">
+        <img src="Pic Jazro/logo.png" alt="logo" style="height: 85px; transform: translate(30px, 5px);"></a>
+      <a href="https://www.jazro.com.my/">
+        <img src="Pic Jazro/text.png" alt="logo" style="height: 30px; transform: translate(30px, 5px);">
+      </a>
+
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">=</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="/Jazro2/LandingPage.html">Home</a>
+          <a href="https://portal.jazro.com.my/">Learning Portal</a>
+          <a href="https://www.jazro.com.my/about-us">About Us</a>
+          <a href="/Jazro2/credit.html">credit</a>
+        </div>
+
+      </div>
+      <!-- End of Dropdown Button -->
+
+      <!-- <p class="runCodePos">
+      <button onclick="runCode()" class="runCode">Run Simulation</button>
+    </p> -->
+
+      <p class="converterPos">
+        <a href="index2.html">
+          <button class="converter">Block Coding</button>
+        </a>
+      </p>
+
+    </div>
+    <!-- End of logo class -->
+
+  </div>
+  <!-- End of the Header Class-->
+
+  <!-- End of Blockly Class -->
+  <!-- <canvas id="simulation"></canvas>
+  <script src="Simulation/Simulation.js"></script> -->
+
+
+
+
+</body>
+<html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edublock Homepage</title>
+  <link rel="stylesheet" href='/EduBlock/Jazro2/css/tester.css' />
+  <link rel="stylesheet" type="/Jazro2/css/tester.css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <script src="https://kit.fontawesome.com/b9ae426220.js" crossorigin="anonymous"></script>
+
+  <link rel="icon" href="Pic Jazro/logo.png">
+
+</head>
+
+<body>
+
+  <div class="top-nav">
+
+    <ul class="ul-navbar">
+      <li class="split-log"><img src="/Jazro2/Pic Jazro/logo.png" class="logo-nav"></li>
+      <li class="split"><img src="/Jazro2/Pic Jazro/text.png" class="text-nav"></li>
+
+
+      <li class="li-navbar"><a href="/Jazro2/credit.html" class="a-navbar">CREDIT</a></li>
+      <li class="li-navbar"><a href="/Jazro2/index2.html" class="a-navbar">EDUBLOCK</a></li>
+      <li class="li-navbar"><a href="https://www.jazro.com.my/" class="a-navbar">HOME</a></li>
+      <li class="li-navbar" style="width: 132px;"><a href="https://www.jazro.com.my/about-us" class="a-navbar">ABOUT
+          US</a></li>
+
+    </ul>
+
+  </div>
+  <!-- nav bar done -->
+
+  <!-- content 2 -->
+  <div class="body-slide">
+    <div class="img-slider">
+      <div class="slide active">
+        <img src="Asset/prolm3.png" alt="" class="size-img">
+        <div class="info">
+          <h2>Code Translator</h2>
+          <p>Translate your code block into programming language</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="Asset/proIm5.png" alt="" class="size-img">
+        <div class="info">
+          <h2>Variety</h2>
+          <p>A lot of colourful code block to be explore</p>
+        </div>
+      </div>
+      <!-- unused 
+      <div class="slide">
+        <img src="proIm6.png" alt="" class="size-img">
+        <div class="info">
+          <h2>Variety</h2>
+          <p>A lot of colourful code block to be explore</p>
+        </div>
+      </div>  
+      unused end -->
+      <div class="slide">
+        <img src="Asset/prolm4.png" alt="" class="size-img">
+        <div class="info">
+          <h2>Playground</h2>
+          <p>A Display that show how your code works</p>
+        </div>
+      </div>
+
+      <div class="navigation">
+        <div class="btn active"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <!-- unused
+        <div class="btn"></div>
+        unused end -->
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function (manual) {
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function (activeClass) {
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function () {
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+          slides[i].classList.add('active');
+          btns[i].classList.add('active');
+          i++;
+
+          if (slides.length == i) {
+            i = 0;
+          }
+          if (i >= slides.length) {
+            return;
+          }
+          repeater();
+        }, 10000);
+      }
+      repeater();
+    }
+    repeat();
+  </script>
+  <!-- content 2 done -->
+  <!-- content 1 -->
+  <div class="container-content">
+    <a class="a-content">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/nWhlowCMMfs" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+      <p class="robot-intro"> robotics education company which aims to DEVELOP DIGITAL TALENTS in STEM fields,
+        Science, Technology, Engineering & Mathematics with specially curated contents for students from the age of 5-17
+        years old to learn, discover and explore robotics
+        & coding via fun learning method, inline with Industrial Revolution 4.0 future career opportunities and needs
+      </p>
+      <!-- data start -->
+      <!-- data end -->
+    </a>
+
+
+
+
+  </div>
+  <!-- content 1 done -->
+
+
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="https://www.jazro.com.my/about-us">ABOUT US</a></li>
+            <li><a href="https://www.jazro.com.my/blog">BLOG</a></li>
+            <li><a href="https://www.jazro.com.my/disclaimer">DISCLAIMER</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="https://api.whatsapp.com/send?phone=60185778242&text=JAZROWebsite">Whatsapp Us</a></li>
+            <li><a href="#">Hotline Number: +6018-5778242</a></li>
+            <li><a
+                href="https://www.google.com/maps/place/JAZRO+Robotic+Academy+(KERTEH)/@4.505102,103.4409805,17z/data=!3m1!4b1!4m5!3m4!1s0x31c871df55c60e53:0x6a669bc731fcc8cc!8m2!3d4.5051021!4d103.4431693">Our
+                Location</a></li>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/jazarirobot/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@JazroTV"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/jazarirobot/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@jazari_robot"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- footer end -->
+  </div>
+
+
+</body>
+
+</html>
